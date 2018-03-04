@@ -1,0 +1,80 @@
+html {
+  line-height: 1.7;
+  transition: all 0.3s ease-out;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+body, p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+  font-family: 'Museo Sans', serif;
+  color: $black;
+}
+
+::selection {
+  background-color: $black;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+section {
+  position: relative;
+}
+
+a, p, ul {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+a:focus {
+  outline: 0;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 44px;
+  line-height: 1.4;
+}
+
+h3 {
+  font-size: 27px;
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 0;
+}
+
+h2+p.label, h3+p.label {
+  margin: 5px 0 25px;
+}
+
+.lead {
+  margin-top: 25px;
+  margin-bottom: 25px !important;
+}
+
+.m-a {
+  margin-left: auto;
+  margin-right: auto;
+}

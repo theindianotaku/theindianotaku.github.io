@@ -1,0 +1,40 @@
+@media (min-width: 768px) {
+  .hidden-on-mobile {
+    display: initial;
+  }
+  .hidden-on-large {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hidden-on-mobile {
+    display: none;
+  }
+  .hidden-on-large {
+    display: initial;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  nav>.container {
+    margin: 0;
+    width: 100%;
+  }
+  #content-wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .header .nav-right, .case-study .nav-right {
+    width: 280px;
+  }
+  .case-study li {
+    margin-left: 0px;
+  }
+  .case-study p, .case-study li {
+    font-size: 16px;
+  }
+  .case-details p {
+    font-size: 12px;
+  }
+}
