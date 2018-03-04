@@ -69,12 +69,16 @@ h2+p.label, h3+p.label {
   margin: 5px 0 25px;
 }
 
-.lead {
-  margin-top: 25px;
-  margin-bottom: 25px !important;
+.content-container {
+  padding-top: 60px;
 }
 
-.m-a {
+.container {
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: $desktop) {
+    width: 70%;
+  }
 }

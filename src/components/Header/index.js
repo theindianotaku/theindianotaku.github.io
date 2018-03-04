@@ -1,31 +1,49 @@
 import React from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import { Grid, User, Mail, List } from 'react-feather';
 
 import Logo from '../../assets/images/my-name.png';
 
 const Header = () => (
-  <nav id="header" className="header">
-    <div className="container m-a">
-      <div className="nav-left">
-        <div className="logo-wrapper valign-wrapper center-align">
-          <a href="#main" className="valign-wrapper">
-            <img className="logo" src={Logo} alt="Debashish Nayak" />
-          </a>
+  <nav id="header" className="header active">
+    <div className="container">
+      <div className="header__left">
+        <div className="header__logo-wrapper valign-wrapper center-text">
+          <Link className="valign-wrapper" to="/">
+            <img className="header__logo" src={Logo} alt="Debashish Nayak" />
+          </Link>
         </div>
       </div>
-      <div className="nav-right hidden-on-mobile">
+      <div className="header__right hidden-on-mobile">
         <div className="valign-wrapper">
-          <a className="strike-through" href="#work">projects</a>
-          <a className="strike-through" href="#principles">workflow</a>
-          <a className="strike-through" href="#myself">about</a>
-          <a className="strike-through" href="#contact">contact</a>
+          <NavLink className="strike-through" activeClassName="active" to="/work">
+            work
+          </NavLink>
+          <NavLink className="strike-through" activeClassName="active" to="/workflow">
+            workflow
+          </NavLink>
+          <NavLink className="strike-through" activeClassName="active" to="/about">
+            about
+          </NavLink>
+          <NavLink className="strike-through" activeClassName="active" to="/contact">
+            contact
+          </NavLink>
         </div>
       </div>
-      <div className="nav-right hidden-on-large">
+      <div className="header__right hidden-on-tablet">
         <div className="valign-wrapper">
-          <a className="strike-through" href="#work"><i className="material-icons float-right">dashboard</i></a>
-          <a className="strike-through" href="#principles"><i className="material-icons float-right">bubble_chart</i></a>
-          <a className="strike-through" href="#myself"><i className="material-icons float-right">face</i></a>
-          <a className="strike-through" href="#contact">contact</a>
+          <NavLink className="strike-through" activeClassName="active" to="/work">
+            <Grid className="float-right" size={20} />
+          </NavLink>
+          <NavLink className="strike-through" activeClassName="active" to="/workflow">
+            <List className="float-right" size={20} />
+          </NavLink>
+          <NavLink className="strike-through" activeClassName="active" to="/about">
+            <User className="float-right" size={20} />
+          </NavLink>
+          <NavLink className="strike-through" activeClassName="active" to="/contact">
+            <Mail className="float-right" size={20} />
+          </NavLink>
         </div>
       </div>
     </div>
