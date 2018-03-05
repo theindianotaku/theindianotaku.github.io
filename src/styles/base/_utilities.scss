@@ -2,14 +2,21 @@
 .accent, .accent::selection {
   color: $green;
 }
+// fonts
+.standout-text {
+  font-family: $museo;
+}
+
+.sneaky-text {
+  font-family: $open-sans;
+}
+
+.normal {
+  font-weight: 400;
+}
 
 .no-underline, .no-underline:hover {
   text-decoration: none;
-}
-
-// fonts
-.normal {
-  font-weight: 400;
 }
 
 // align
@@ -30,6 +37,8 @@
   text-align: center;
 }
 
+
+// sizes
 .one-vh {
   height: 100vh;
 }
