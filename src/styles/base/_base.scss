@@ -1,10 +1,11 @@
 html {
   line-height: 1.7;
   transition: all 0.3s ease-out;
+  color: #ffffff;
 }
 
 body {
-  background-color: #ffffff;
+  background-color: $bg-black;
 }
 
 body, p {
@@ -14,7 +15,7 @@ body, p {
 
 h1, h2, h3, h4, h5, h6, a {
   font-family: $museo;
-  color: $black;
+  color: #ffffff;
 }
 
 strong {
@@ -22,8 +23,8 @@ strong {
 }
 
 ::selection {
-  background-color: $black;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: $bg-black;
   text-shadow: none;
 }
 

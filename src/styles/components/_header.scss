@@ -10,8 +10,8 @@
   transition: all 0.3s ease-in-out;
   
   &.active {
-    background-color: #fff;
-    border-bottom: 1px solid #F2F3F6;
+    background-color: $bg-black;
+    // border-bottom: 1px solid #F2F3F6;
   }
 
   > .container {
