@@ -4,6 +4,10 @@ import { ArrowRight, ExternalLink } from 'react-feather';
 
 class RecentProjectsSection extends Component {
   render() {
+    const bgImage = {
+      backgroundImage: 'url("https://github.com/theindianotaku/portfolio-assets/blob/master/projects/01-hero.jpg?raw=true")'
+    };
+
     return (
       <section className="container">
         <div className="section-header p-b-md">
@@ -14,7 +18,10 @@ class RecentProjectsSection extends Component {
             <Col xs={12} sm={12} md={6} lg={5}>
               <div className="card">
                 <a href="/" className="card__wrapper">
-                  <div className="card__image">
+                  <div 
+                    className="card__image"
+                    style={bgImage}
+                  >
                   </div>
                   <div className="card__desc">
                     <p className="label">
