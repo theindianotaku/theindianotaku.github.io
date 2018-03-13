@@ -38,8 +38,8 @@ class HeroSection extends Component {
             <div>
               <h3>
                 <span className="accent">Debashish Nayak</span>
-                <h4 className="normal sneaky-text">Frontend Developer, Foodie, Prosome.</h4>
               </h3>
+              <h4 className="normal sneaky-text">Frontend Developer, Foodie, Prosome.</h4>
               <p className="standout-text">
                 <strong>Cheers</strong>, I&apos;m Debashish, <strong>front end developer</strong> & <strong>product designer</strong> dedicated to work with the aim of making products meaningful.
               </p>
