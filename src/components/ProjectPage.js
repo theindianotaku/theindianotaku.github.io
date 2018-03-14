@@ -1,44 +1,66 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router';
 
 import { projects } from '../data/content';
 import ProjectSection from './ProjectSection';
 
-// dangerouslySetInnerHTML={{ __html: projects[0].description }}
-
 class ProjectPage extends Component {
-  constructor (props) {
-    super(props);
-    const id = this.props.match.params.id;
-    this.state = {
-      id,
-      projects
-    };
+  state = {
+    id : 1
   }
 
   componentWillMount () {
-    // add redirect if invalid id
+    if (this.props.match.params.id > projects.length) {
+      this.props.history.push('/');
+    } else {
+      const id = this.props.match.params.id;
+      this.setState({ id });
+    }
   }
-
-  clickHandler = (e) => {
-    e.preventDefault();
-    const id = this.state.id;
-    const newId = (parseInt(id) + 1).toString();
+  
+  componentWillReceiveProps (newProps) {
     this.setState({
-      id: newId
+      id: newProps.match.params.id
     });
   }
 
+  nextProject = () => {
+    const id = this.state.id;
+    const nextId = parseInt(id) + 1;
+
+    if (nextId > projects.length) {
+      this.props.history.push('/projects/1');
+    } else {
+      this.props.history.push(`/projects/${nextId}`);
+    }
+  }
+
+  prevProject = () => {
+    const id = this.state.id;
+    const prevId = parseInt(id) - 1;
+    const lastId = projects.length;
+
+    if (prevId < 1) {
+      this.props.history.push(`/projects/${lastId}`);
+    } else {
+      this.props.history.push(`/projects/${prevId}`);
+    }
+  }
+
   render () {
-    const project = this.state.projects[this.state.id];
+    const project = projects[this.state.id - 1];
     return (
       <div>
-        <ProjectSection project={project} />
+        <ProjectSection location={this.props.location} project={project} />
         <button
-          onClick={this.clickHandler}
-        >Click me boi</button>
+          onClick={this.prevProject}
+        >Prev</button>
+        <button
+          onClick={this.nextProject}
+        >Next</button>
       </div>
     );
   }
 }
 
-export default ProjectPage;
+export default withRouter(ProjectPage);

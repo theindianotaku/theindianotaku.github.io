@@ -1,11 +1,6 @@
 import React from 'react';
 
 import LazyImage from '../Common/LazyImage';
-//import image from '../../assets/images/my-name.png';
-
-const image = 'https://github.com/IRIdeveloper/react-iron-image/blob/master/src/iron-image-small.jpg?raw=true';
-
-// const hdUrl = 'https://images.unsplash.com/photo-1478562853135-c3c9e3ef7905';
 
 const ProjectSection = ({ project }) => {
   const hdUrl = project.image;
@@ -18,7 +13,8 @@ const ProjectSection = ({ project }) => {
     <div>
       Project Section
       <div>
-        <LazyImage srcPreload={image} srcLoaded={hdUrl} />
+        <img height="100px" width="auto" src={hdUrl} alt="heloo"/>
+        <LazyImage theme={project.theme} toLoad={hdUrl} />
         <p>{project.title}</p>
       </div>
       <div>

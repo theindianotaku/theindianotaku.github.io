@@ -14,8 +14,9 @@
   right: 0;
   bottom: 0;
   left: 0;
-
-  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .lazy-image-loaded {
@@ -35,4 +36,8 @@
 
 .lazy-image-fade-in {
   opacity: 1;
+}
+
+.lazy-image-fade-out {
+  opacity: 0;
 }
