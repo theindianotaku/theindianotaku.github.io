@@ -2,6 +2,7 @@
 .accent, .accent::selection {
   color: $green;
 }
+
 // fonts
 .standout-text {
   font-family: $museo;
@@ -74,6 +75,19 @@
 // floats
 .float-right {
   float: right;
+}
+
+// transition
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.transition-ease {
+  transition: opacity 0.1s ease;
 }
 
 // hide-show classes

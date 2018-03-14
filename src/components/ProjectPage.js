@@ -5,8 +5,12 @@ import { projects } from '../data/content';
 import ProjectSection from './ProjectSection';
 
 class ProjectPage extends Component {
-  state = {
-    id : 1
+  constructor(props) {
+    super(props);
+    this.projectRef = null;
+    this.state = {
+      id : 1
+    };
   }
 
   componentWillMount () {
@@ -22,6 +26,17 @@ class ProjectPage extends Component {
     this.setState({
       id: newProps.match.params.id
     });
+  }
+
+  componentWillUpdate () {
+    console.log('will update');
+    this.projectRef.classList.add('fade-out');
+  }
+
+  componentDidUpdate () {
+    console.log('did update');
+    this.projectRef.classList.remove('fade-out');
+    this.projectRef.classList.add('fade-in');
   }
 
   nextProject = () => {
@@ -50,7 +65,7 @@ class ProjectPage extends Component {
   render () {
     const project = projects[this.state.id - 1];
     return (
-      <div>
+      <div className="transition-ease" ref={(loadedElem) => this.projectRef = loadedElem} >
         <ProjectSection location={this.props.location} project={project} />
         <button
           onClick={this.prevProject}
