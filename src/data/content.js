@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: 1,
-    title: 'Web Application of Helpdesk, Channel i',
+    title: 'Helpdesk',
     tags: ['UI/UX', 'Front-end', 'IMG'],
     role: 'Product Design & Front-end development',
     technical: 'HTML, CSS, Vanilla JS, jQuery, Materialize CSS, Django CKEditor',

@@ -1,13 +1,15 @@
 .header {
-  height: 60px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
   background-color: transparent;
   border-bottom: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  height: 60px;
+  width: 100%;
   transition: all 0.3s ease-in-out;
+  transform: translateZ(0);
+  z-index: 1000;
   
   &.active {
     background-color: $bg-black;
@@ -34,7 +36,7 @@
     height: 60px;
     width: 240px;
 
-    .valign-wrapper {
+    >div {
       height: 60px;
     }
   }
@@ -52,12 +54,6 @@
   @media (min-width: $tablet) {
     .header__right {
       width: 410px;
-    }
-  }
-
-  @media (min-width: $desktop) {
-    .container {
-      width: 80%;
     }
   }
 }

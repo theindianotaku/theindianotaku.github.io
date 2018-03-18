@@ -5,7 +5,10 @@
 @import './base/_utilities';
 
 @import './components/_header';
+@import './components/_lines';
+@import './components/_pluses';
 @import './components/_landing';
-@import './components/_projects';
+@import './components/_projectList';
+@import './components/_project';
 
 @import './base/_media-queries';

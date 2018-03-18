@@ -29,12 +29,10 @@ class ProjectPage extends Component {
   }
 
   componentWillUpdate () {
-    console.log('will update');
     this.projectRef.classList.add('fade-out');
   }
 
   componentDidUpdate () {
-    console.log('did update');
     this.projectRef.classList.remove('fade-out');
     this.projectRef.classList.add('fade-in');
   }
@@ -65,14 +63,15 @@ class ProjectPage extends Component {
   render () {
     const project = projects[this.state.id - 1];
     return (
-      <div className="transition-ease" ref={(loadedElem) => this.projectRef = loadedElem} >
+      <div className="project__container transition-ease" ref={(loadedElem) => this.projectRef = loadedElem} >
         <ProjectSection location={this.props.location} project={project} />
-        <button
+
+        {/* <button
           onClick={this.prevProject}
         >Prev</button>
         <button
           onClick={this.nextProject}
-        >Next</button>
+        >Next</button> */}
       </div>
     );
   }

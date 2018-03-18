@@ -9,12 +9,13 @@ import ProjectsListPage from '../components/ProjectsListPage';
 import ProjectPage from '../components/ProjectPage';
 import WorkflowPage from '../components/WorkflowPage';
 import NotFoundPage from '../components/NotFoundPage';
+import Lines from '../components/Common/Lines';
 
 const AppRouter = () => (
   <BrowserRouter>
-    <React.Fragment>
+    <div className="shell">
       <Header />
-      <main className="content-container">
+      <main className="main">
         <Switch>
           <Route path="/" exact={true} component={LandingPage} />
           <Route path="/workflow" component={WorkflowPage} />
@@ -25,7 +26,8 @@ const AppRouter = () => (
           <Route component={NotFoundPage} />
         </Switch>
       </main>
-    </React.Fragment>
+      <Lines />
+    </div>
   </BrowserRouter>
 );
 

@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  transition: all .3s ease-in-out;
 }
 
 html {
@@ -78,8 +79,27 @@ h2+p.label, h3+p.label {
   margin: 5px 0 25px;
 }
 
-.content-container {
-  padding-top: 60px;
+.shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  padding: 0 70px;
+  overflow: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media (max-width: $p-mobile) {
+    padding: 0 30px;
+  }
+}
+
+.main {
+  position: relative;
+  height: calc(100vh - 120px);
+  margin-bottom: 60px;
+  z-index: 20;
+  flex: 1;
 }
 
 .container {

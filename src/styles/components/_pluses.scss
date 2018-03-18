@@ -1,0 +1,96 @@
+.pluses {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  z-index: 0;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  transform: translateX(-50%);
+}
+
+.plus-row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+
+  &.hide {
+    opacity: 0;
+  }
+}
+
+.plus {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 50%;
+  margin-left: -4px;
+  transform: translateY(-50%);
+  transition: .5s;
+}
+
+.plus:first-child {
+  left: 0;
+}
+
+.plus:after, .plus:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: #3d4249;
+}
+
+.plus:before {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+}
+
+.plus:after {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 100%;
+}
+
+.plus:first-child {
+  left: 0
+}
+
+.plus:nth-child(2) {
+  left: 16.66%
+}
+
+.plus:nth-child(3) {
+  left: 33.32%
+}
+
+.plus:nth-child(4) {
+  left: 49.98%
+}
+
+.plus:nth-child(5) {
+  left: 66.64%
+}
+
+.plus:nth-child(6) {
+  left: 83.3%
+}
+
+.plus:nth-child(7) {
+  left: 99.96%
+}
+
+.plus:nth-child(8) {
+  left: 116.62%
+}
