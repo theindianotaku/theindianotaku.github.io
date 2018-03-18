@@ -7,7 +7,7 @@ export const projects = [
     technical: 'HTML, CSS, Vanilla JS, jQuery, Materialize CSS, Django CKEditor',
     type: 'Team Project',
     period: 'February 2016',
-    description: 'In agency, the same question has to be answered each year: how to wish the clients a happy new year ? After the huge success of its 2016 wishes, Make Me Pulse was highly anticipated. With the central message that &apos;Good ideas are made to be experienced&apos;, we decided to present several scenes containing revolutionary inventions, with which we could interact.&#10;&#10;    I was Lead DA on this project, so I decided to imagine and model many 3D objects to illustrate each of the inventions within a colorful universe, contrasting with the 2016 b&amp;w Wishes. Developers then used these 3D objects to add some interaction, and magic. To start 2017 well.',
+    description: 'The main aim of this platform was to bring the existing students of IIT Roorkee close to the freshers so that the freshers can get a proper insight on the Institute. The environment of this place is quite different from what they have yet experienced. This is true, both for the freshers and their parents. This platform would help the students clarify any doubts that they have regarding various aspects of the Institute by creating a link between them and the existing students.',
     image: 'https://github.com/theindianotaku/portfolio-assets/blob/master/projects/01-hero.png?raw=true',
     theme: '#66bb6a'
   }, {

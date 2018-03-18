@@ -34,6 +34,10 @@
   margin-left: -4px;
   transform: translateY(-50%);
   transition: .5s;
+
+  &.hide {
+    opacity: 0;
+  }
 }
 
 .plus:first-child {

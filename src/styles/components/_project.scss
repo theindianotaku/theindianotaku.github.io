@@ -19,7 +19,7 @@
 .project-pic {
   position: relative;
   display: flex;
-  align-items: center;
+  cursor: pointer;
 
   @media (max-width: $p-tablet) {
     width: 100% !important;
@@ -46,6 +46,10 @@
   width: 83.33%;
   height: calc(100vh - 60px);
   z-index: 1;
+  transition-delay: 0.1s;
+  transition-property: width;
+  transition-duration: .2s;
+  transition-timing-function: ease-in;
 }
 
 .dark-overlay {
@@ -59,20 +63,81 @@
 }
 
 .project-title {
-  z-index: 15;
-  font-size: 7.8vw;
-  margin-left: -20px;
-  transform: translateY(-52%);
+  display: flex;
+  height: calc(100vh - 120px);
+  width: 100%;
+}
 
-  // &:before {
-  //   content: '';
-  //   border-top: 1em solid #fafafa;
-  //   position: absolute;
-  //   margin: 0 auto;
-  //   width: 100%;
-  //   left: 0;
-  //   right: 0;
-  //   top: 53%;
-  //   z-index: 14;
-  // }
+.project-title__title {
+  font-size: 7.8vw;
+  color: whitesmoke;
+  position: relative;
+  align-self: center;
+  margin-left: -20px;
+  z-index: 15;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  text-shadow: none;
+  bottom: 0;
+
+  &:before {
+    content: '';
+    border-top: 1.1em solid rgba(243, 243, 250, 0.95);
+    position: absolute;
+    width: 0%;
+    left: 0;
+    right: 0;
+    top: 12.5%;
+    z-index: -1;
+    transform: skewX(-40deg);
+    transition: width .2s cubic-bezier(.68, 0, .33, 1) .1s;
+    transition: width .2s cubic-bezier(.68, 0, .33, 1) .1s, border-color .2s cubic-bezier(.55, .055, .675, .19) .1s;
+  }
+}
+
+.project-showcase {
+  position: absolute;
+  bottom: 50px;
+  right: 10px;
+  opacity: 0;
+  font-size: 14px;
+  z-index: 15;
+
+  &:before {
+    content: '';
+    border-top: 2em solid $green;
+    position: absolute;
+    width: 30%;
+    right: 20%;
+    top: -6%;
+    z-index: -1;
+    transform: skewX(-40deg);
+    transition: all .3s cubic-bezier(.68, 0, .33, 1);
+  }
+}
+
+.project-pic:hover {
+  .project-img-holder {
+    width: 85%;
+  }
+  .project-title__title {
+    color: $bg-black;
+    margin-left: -15px;
+    text-shadow: -0.02em 0.02em 0px #7ad71f;
+    bottom: 0.02em;
+
+    &:before {
+      width: 100%;
+    }
+  }
+  .project-showcase {
+    opacity: 1;
+    right: 0;
+    bottom: 60px;
+
+    &:before {
+      right: 0;
+      width: 20%;
+    }
+  }
 }

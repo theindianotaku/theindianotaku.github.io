@@ -17,6 +17,10 @@
   height: 100%;
   background-color: #fff;
   opacity: .02;
+
+  &.hide {
+    opacity: 0;
+  }
 }
 
 .line:first-child {

@@ -7,10 +7,6 @@ import HLines from '../Common/HLines';
 const ProjectSection = ({ project }) => {
   const hdUrl = project.image;
 
-  const tagsElement = project.tags.map((tag, index) => (
-    <span key={index}>{tag}</span>
-  ));
-
   return (
     <Fragment>
       <div className="half project-pic">
@@ -20,12 +16,19 @@ const ProjectSection = ({ project }) => {
             <LazyImage theme={project.theme} toLoad={hdUrl} />
           </div>
         </div>
-        <h1 className="project-title">
-          {project.title}
-        </h1>
+        <div className="project-title">
+          <h1 className="project-title__title">
+            {project.title}
+          </h1>
+          <a className="project-showcase medium">Show Gallery</a>
+        </div>
       </div>
-      <div className="half">
-
+      <div className="half project-content">
+        <h5>{project.period}</h5>
+        <span>{project.role}</span>
+        <p>{project.description}</p>
+        <p>Team: <span>{project.type}</span></p>
+        <p>Stack: <span>{project.technical}</span></p>
       </div>
       <Pluses />
       <HLines />

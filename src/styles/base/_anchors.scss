@@ -22,14 +22,15 @@ a.strike-through {
     position: absolute;
     margin: 0 auto;
     width: 0;
-    left: 0;
-    right: 0;
+    left: -0.25em;
+    right: 0.75em;
     top: 53%;
     -webkit-transition: width .3s cubic-bezier(.68, 0, .33, 1) .1s;
     transition: width .3s cubic-bezier(.68, 0, .33, 1) .1s;
     -webkit-transition: width .3s cubic-bezier(.68, 0, .33, 1) .1s, border-color .5s cubic-bezier(.55, .055, .675, .19);
     transition: width .3s cubic-bezier(.68, 0, .33, 1) .1s, border-color .5s cubic-bezier(.55, .055, .675, .19);
     z-index: -1;
+    transform: skew(-45deg);
   }
 
   &.button {
