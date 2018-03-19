@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
+import { NavLink } from 'react-router-dom';
 
 import { projects } from '../data/content';
 import ProjectSection from './ProjectSection';
@@ -62,24 +63,21 @@ class ProjectPage extends Component {
 
   render () {
     const project = projects[this.state.id - 1];
+
     return (
       <div className="project__container transition-ease" ref={(loadedElem) => this.projectRef = loadedElem} >
         <ProjectSection location={this.props.location} project={project} />
-        
-        <div className="project-controls">
-          <button
-            onClick={this.prevProject}
-          >Prev</button>
-          <button
-            onClick={this.nextProject}
-          >Next</button>
+        <div className="project-nav">
+          {projects.map((project, index) => {
+            return (
+              <NavLink key={index} className="project-nav-item" activeClassName="active" to={`/projects/${index + 1}`}>
+                <span className="project-nav-bar base"></span>
+                <span className="project-nav-bar clone"></span>
+                <span className="project-nav-title">{project.title}</span>
+              </NavLink>
+            );
+          })}
         </div>
-        {/* <button
-          onClick={this.prevProject}
-        >Prev</button>
-        <button
-          onClick={this.nextProject}
-        >Next</button> */}
       </div>
     );
   }
