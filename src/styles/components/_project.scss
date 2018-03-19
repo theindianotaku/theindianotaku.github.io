@@ -1,7 +1,16 @@
 .project__container {
   display: flex;
-  height: calc(100vh - 60px);
+  height: 100%;
   width: 100%;
+  position: relative;
+}
+
+.project-controls {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.5;
+  z-index: 20;
 }
 
 .half {
@@ -10,7 +19,7 @@
 
   @media (max-width: $p-tablet) {
     flex-basis: 100%!important;
-    height: 100vh;
+    height: calc(100vh - 120px);
     position: absolute;
     width: 100%!important;
   }
@@ -27,17 +36,21 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: calc(100vh - 120px);
   }
 }
 
 .project-imgs {
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  display: none;
+
+  @media screen and (min-width: $p-tablet) {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 .project-img-holder {
@@ -64,16 +77,24 @@
 
 .project-title {
   display: flex;
-  height: calc(100vh - 120px);
   width: 100%;
+  height: 6rem;
+
+  @media screen and (min-width: $p-mobile) {
+    height: 8rem;
+  }
+
+  @media screen and (min-width: $p-tablet) {
+    height: calc(100vh - 120px);
+  }
 }
 
 .project-title__title {
-  font-size: 7.8vw;
+  font-size: 2rem;
   color: whitesmoke;
   position: relative;
   align-self: center;
-  margin-left: -20px;
+  margin-left: 0px;
   z-index: 15;
   transition: all 0.3s ease-in-out;
   user-select: none;
@@ -93,51 +114,152 @@
     transition: width .2s cubic-bezier(.68, 0, .33, 1) .1s;
     transition: width .2s cubic-bezier(.68, 0, .33, 1) .1s, border-color .2s cubic-bezier(.55, .055, .675, .19) .1s;
   }
+
+  @media (min-width: $p-mobile) {
+    font-size: 3rem;
+  }
+
+  @media (min-width: $p-tablet) {
+    font-size: 4rem;
+    margin-left: -20px;
+  }
+
+  @media (min-width: $p-desktop) {
+    font-size: 5rem;
+  }
 }
 
 .project-showcase {
   position: absolute;
-  bottom: 50px;
-  right: 10px;
-  opacity: 0;
+  opacity: 1;
+  bottom: 0;
+  left: 0;
   font-size: 14px;
+  cursor: pointer;
   z-index: 15;
 
   &:before {
     content: '';
     border-top: 2em solid $green;
     position: absolute;
-    width: 30%;
-    right: 20%;
+    width: 20%;
+    right: 0;
     top: -6%;
     z-index: -1;
     transform: skewX(-40deg);
     transition: all .3s cubic-bezier(.68, 0, .33, 1);
   }
+
+  @media (min-width: $p-tablet) { 
+    bottom: -10px;
+    right: 10px;
+    left: initial;
+    opacity: 0;
+
+    &:before {
+      width: 30%;
+      right: 20%;
+      top: -6%;
+    }
+  }
 }
 
-.project-pic:hover {
-  .project-img-holder {
-    width: 85%;
-  }
-  .project-title__title {
-    color: $bg-black;
-    margin-left: -15px;
-    text-shadow: -0.02em 0.02em 0px #7ad71f;
-    bottom: 0.02em;
-
-    &:before {
-      width: 100%;
+@media screen and (min-width: $p-tablet) {
+  .project-pic:hover {
+    .project-img-holder {
+      width: 85%;
     }
-  }
-  .project-showcase {
-    opacity: 1;
-    right: 0;
-    bottom: 60px;
-
-    &:before {
+    .project-title__title {
+      color: $bg-black;
+      margin-left: -15px;
+      text-shadow: -0.02em 0.02em 0px #7ad71f;
+      bottom: 0.02em;
+  
+      &:before {
+        width: 100%;
+      }
+    }
+    .project-showcase {
+      opacity: 1;
       right: 0;
-      width: 20%;
+      bottom: 0px;
+  
+      &:before {
+        right: 0;
+        width: 20%;
+      }
     }
+  }
+}
+
+.project-content {
+  color: $text-dark-grey;
+  font-size: .75rem;
+  font-family: "Museo Sans", serif;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-desc {
+  line-height: 1.7;
+  margin: 10px 0;
+  letter-spacing: 0.5px;
+  
+  @media (min-width: $p-mobile) {
+    margin: 20px 0;
+  }  
+
+  @media (min-width: $p-tablet) {
+    margin: 50px 0;
+    width: 90%;
+  }
+}
+
+.fancy {
+  color: $bg-black;
+  position: relative;
+  margin-right: 20px;
+  width: auto;
+  display: inline-block;
+
+  &:before {
+    content: '';
+    border-top: 1.5em solid rgba(243, 243, 250, 0.95);
+    position: absolute;
+    width: calc(100% + 20px);
+    left: -10px;
+    top: 4.5%;
+    z-index: -1;
+    transform: skew(-20deg);
+  }
+}
+
+.project-desc-showcase {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  opacity: 1;
+  font-size: 14px;
+  z-index: 15;
+  cursor: pointer;
+
+  &:before {
+    content: '';
+    border-top: 2em solid #7ad71f;
+    position: absolute;
+    right: 0;
+    width: 20%;
+    top: -6%;
+    transform: skewX(-40deg);
+    z-index: -1;
+  }
+}
+
+.section-margin {
+  @media (max-width: $p-mobile) {
+    margin-top: 10px;
   }
 }

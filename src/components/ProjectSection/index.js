@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { Row, Col } from 'react-flexbox-grid';
 
 import LazyImage from '../Common/LazyImage';
 import Pluses from '../Common/Pluses';
@@ -23,27 +24,55 @@ const ProjectSection = ({ project }) => {
           <a className="project-showcase medium">Show Gallery</a>
         </div>
       </div>
-      <div className="half project-content">
-        <h5>{project.period}</h5>
-        <span>{project.role}</span>
-        <p>{project.description}</p>
-        <p>Team: <span>{project.type}</span></p>
-        <p>Stack: <span>{project.technical}</span></p>
+      <div className="half project-content bold">
+        <Row className="hidden-on-mobile">
+          <Col xs={12} sm={6}>
+            <div>
+              <span className="fancy">Period</span>
+            </div>
+            <div>
+              <span>{project.period}</span>
+            </div>
+          </Col>
+          <Col xs={12} sm={6} className="section-margin">
+            <div>
+              <span className="fancy">Role</span>
+            </div>
+            <div>
+              <span>{project.role}</span>
+            </div>
+          </Col>
+        </Row>
+        <Row className="project-desc">
+          <Col xs={12}>
+            <span className="fancy">Description</span>
+          </Col>
+          <Col xs={12} md={11}>
+            <span className="text-light">{project.description}</span>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} sm={6}>
+            <div>
+              <span className="fancy">Team</span>
+            </div>
+            <div>
+              <span>{project.type}</span>
+            </div>
+          </Col>
+          <Col xs={12} sm={6} className="section-margin">
+            <div>
+              <span className="fancy">Stack</span>
+            </div>
+            <div>
+              <span>{project.technical}</span>
+            </div>
+          </Col>
+        </Row>
+        <a className="project-desc-showcase medium">Github Repo</a>
       </div>
       <Pluses />
       <HLines />
-      {/* <div>
-        <img height="100px" width="auto" src={hdUrl} alt="heloo"/>
-        <LazyImage theme={project.theme} toLoad={hdUrl} />
-        <p>{project.title}</p>
-      </div>
-      <div>
-        <p>{tagsElement}</p>
-        <p>role: <span>{project.role}</span></p>
-        <p>Team: <span>{project.type}</span></p>
-        <p>Stack: <span>{project.technical}</span></p>
-        <div dangerouslySetInnerHTML={{ __html: project.description }}></div>
-      </div> */}
     </Fragment>
   );
 };

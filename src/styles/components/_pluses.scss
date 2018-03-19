@@ -11,6 +11,10 @@
   flex-direction: column;
   width: 100%;
   transform: translateX(-50%);
+
+  @media (max-width: $p-tablet) {
+    display: none;
+  }
 }
 
 .plus-row {

@@ -3,6 +3,14 @@
   color: $green;
 }
 
+.text-light {
+  color: $text-grey;
+}
+
+.text-dark {
+  color: $text-dark-grey;
+}
+
 // fonts
 .standout-text {
   font-family: $museo;
@@ -18,6 +26,11 @@
 
 .medium {
   font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+  letter-spacing: 0.2px;
 }
 
 .no-underline, .no-underline:hover {
@@ -99,10 +112,10 @@
 
 // hide-show classes
 .hidden-on-mobile {
-  display: none;
+  display: none !important;
 
-  @media (min-width: $tablet) {
-    display: initial;
+  @media (min-width: $p-mobile) {
+    display: flex !important;
   }
 }
 

@@ -65,7 +65,15 @@ class ProjectPage extends Component {
     return (
       <div className="project__container transition-ease" ref={(loadedElem) => this.projectRef = loadedElem} >
         <ProjectSection location={this.props.location} project={project} />
-
+        
+        <div className="project-controls">
+          <button
+            onClick={this.prevProject}
+          >Prev</button>
+          <button
+            onClick={this.nextProject}
+          >Next</button>
+        </div>
         {/* <button
           onClick={this.prevProject}
         >Prev</button>
