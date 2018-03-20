@@ -1,10 +1,33 @@
 .landing {
   &__wrapper {
-    height: 80vh;
+    height: 70vh;
     min-height: 500px;
   }
 
   &__hero-image {
     width: 100%;
+  }
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &__container {
+    height: 70vh;
+    justify-content: center;
+  }
+
+  &__img {
+    height: 300px;
+    z-index: 10;
+  }
+
+  @media screen and (max-width: $p-mobile) {
+    display: none !important;
   }
 }

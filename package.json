@@ -9,6 +9,7 @@
     "npm-run-all": "^4.1.2",
     "prettier-eslint": "^8.8.1",
     "react": "^16.2.0",
+    "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.2.0",
     "react-feather": "^1.0.8",
     "react-flexbox-grid": "^2.0.0",
