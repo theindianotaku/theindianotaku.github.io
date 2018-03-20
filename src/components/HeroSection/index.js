@@ -33,7 +33,7 @@ class HeroSection extends Component {
   render () {
     return (
       <React.Fragment>
-        <Grid fluid className="" >
+        <Grid className="" >
           <Row className="landing__wrapper" middle="xs" >
             <Col xs={12} sm={10} md={6} lg={6} >
               <div>
