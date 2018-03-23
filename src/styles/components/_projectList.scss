@@ -1,6 +1,6 @@
 .card {
   position: relative;
-  height: 525px;
+  height: 450px;
   background-color: $bg-dark-black;
   margin-bottom: 40px;
   overflow: hidden;
@@ -12,7 +12,7 @@
     box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.08);
   }
 
-  .card__wrapper {
+  &__wrapper {
     width: 100%;
     height: 100%;
   }
@@ -20,9 +20,9 @@
   &__title {
     color: white;
     .icon--arrow {
-      color: white;
-      height: 27px;
-      width: 27px;
+      color: $text-grey;
+      height: 20px;
+      width: 20px;
     }
   }
 }
@@ -32,37 +32,49 @@
   background-position: left center;
   position: relative;
   width: 100%;
-  height: 385px;
+  height: 330px;
   overflow: hidden;
 }
 
 .card__desc {
   position: absolute;
   bottom: 0;
-  height: 140px;
+  height: 120px;
   width: 100%;
   background-color: $bg-dark-black;
-  padding: 35px 25px;
+  padding: 25px;
   border-radius: 0 0 4px 4px;
   z-index: 1;
   transition: all 0.25s ease-in-out;
+
+  p.label {
+    font-size: 10px;
+    margin-top: 10px;
+  }
 }
 
 .card__desc-panel {
-  color: #9394A7;
+  color: $text-dark-grey;
   opacity: 0;
   transition: all 0.25s ease-in-out;
+
+  > p {
+    font-size: 14px;
+  }
+}
+
+.card__title {
+  font-size: 20px;
 }
 
 .card__wrapper:hover,
 .card__wrapper.active {
-  
   .icon--arrow {
     color: $green;
   }
 
   .card__desc {
-    height: 280px;
+    height: 200px;
   }
 
   .card__desc-panel {

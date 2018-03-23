@@ -102,13 +102,3 @@ h2+p.label, h3+p.label {
   z-index: 20;
   flex: 1;
 }
-
-.container {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-
-  @media (min-width: $desktop) {
-    width: 70%;
-  }
-}
