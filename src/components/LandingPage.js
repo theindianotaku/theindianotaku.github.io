@@ -7,8 +7,11 @@ import RecentProjectsSection from './RecentProjectsSection';
 class LandingPage extends Component {
   render() {
     return (
-      <Scrollbars autohide="true" autoHideTimeout={1000}
-        autoHideDuration={200}>
+      <Scrollbars
+        autohide="true"
+        autoHideTimeout={1000} 
+        autoHideDuration={200}
+      >
         <HeroSection />
         <RecentProjectsSection />
       </Scrollbars>

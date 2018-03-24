@@ -1,6 +1,14 @@
 // colors
-.accent, .accent::selection {
+.accent {
   color: $green;
+
+  &::selection {
+    color: white;
+  }
+}
+
+.text-white {
+  color: white;
 }
 
 .text-light {
@@ -8,7 +16,7 @@
 }
 
 .text-dark {
-  color: $text-dark-grey;
+  color: $text-dark-grey !important;
 }
 
 // fonts
@@ -31,6 +39,10 @@
 .bold {
   font-weight: 700;
   letter-spacing: 0.2px;
+}
+
+.italics {
+  font-style: italic;
 }
 
 .no-underline, .no-underline:hover {
@@ -79,17 +91,36 @@
   margin-right: auto;
 }
 
+.m-b-sm {
+  margin-bottom: 24px;
+}
+
 // paddings
 .p-b-md {
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
 .p-b-sm {
-  padding-bottom: 20px;
+  padding-bottom: 24px;
 }
 
 .p-b-xs {
-  padding-bottom: 10px;
+  padding-bottom: 8px;
+}
+
+.p-h-xs {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.p-t-md {
+  padding-top: 40px;
+}
+
+// position 
+
+.pos-relative {
+  position: relative;
 }
 
 // floats
@@ -184,9 +215,4 @@
 
 .label, .section-label {
   font-family: $museo;
-}
-
-.lead {
-  margin-top: 25px;
-  margin-bottom: 25px !important;
 }

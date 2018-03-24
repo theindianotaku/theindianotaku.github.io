@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-import { ArrowRight, ExternalLink } from 'react-feather';
+import { ChevronRight } from 'react-feather';
 
 class RecentProjectsSection extends Component {
   render() {
@@ -13,7 +13,7 @@ class RecentProjectsSection extends Component {
         <div className="section-header p-b-md">
           <h4><span className="accent">{'//'}</span> recent works</h4>
         </div>
-        <Grid fluid>
+        <Grid fluid className="m-b-sm">
           <Row>
             <Col xs={12} sm={10} md={6} lg={4}>
               <div className="card">
@@ -32,7 +32,7 @@ class RecentProjectsSection extends Component {
                     </p>
                     <h3 className="card__title valign-wrapper space-between">
                     Channeli Re-Design
-                      <ArrowRight className="icon--arrow" />
+                      <ChevronRight className="icon--arrow" />
                     </h3>
                     <div className="card__desc-panel" >
                       <p>Channel i is an e-portal providing various quality services to the students, alumni and the faculty of IIT Roorkee.</p>
@@ -55,7 +55,7 @@ class RecentProjectsSection extends Component {
                     </p>
                     <h3 className="card__title valign-wrapper space-between">
                     Channeli Re-Design
-                      <ArrowRight                 className="icon--arrow" />
+                      <ChevronRight                 className="icon--arrow" />
                     </h3>
                     <div className="card__desc-panel" >
                       <p>Channel i is an e-portal providing various quality services to the students, alumni and the faculty of IIT Roorkee.</p>
@@ -69,16 +69,40 @@ class RecentProjectsSection extends Component {
         <div className="section-header p-b-md">
           <h4><span className="accent">{'//'}</span> side projects</h4>
         </div>
-        <Grid fluid>
+        <Grid fluid className="m-b-sm">
           <Row>
-            <Col xs={6} sm={6} md={4} lg={3}>
+            <Col xs={12} sm={10} md={6} lg={4}>
               <div className="card mini">
                 <a href="/" className="card__wrapper">
-                  <div className="card__desc">
-                    <h4 className="card__title valign-wrapper space-between">
-                    react-type-master
-                      <ExternalLink className="icon--arrow" />
+                  <div className="card__desc valign-wrapper space-between">
+                    <h4 className="card__title space-between">
+                      Type Master
                     </h4>
+                    <ChevronRight className="icon--arrow" />
+                  </div>
+                </a>
+              </div>
+            </Col>
+            <Col xs={12} sm={10} md={6} lg={4}>
+              <div className="card mini">
+                <a href="/" className="card__wrapper">
+                  <div className="card__desc valign-wrapper space-between">
+                    <h4 className="card__title space-between">
+                      The Indecision
+                    </h4>
+                    <ChevronRight className="icon--arrow" />
+                  </div>
+                </a>
+              </div>
+            </Col>
+            <Col xs={12} sm={10} md={6} lg={4}>
+              <div className="card mini">
+                <a href="/" className="card__wrapper">
+                  <div className="card__desc valign-wrapper space-between">
+                    <h4 className="card__title space-between">
+                      Expense-ify
+                    </h4>
+                    <ChevronRight className="icon--arrow" />
                   </div>
                 </a>
               </div>
