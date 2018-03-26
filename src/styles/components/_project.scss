@@ -274,7 +274,7 @@
   @media screen and (max-width: $p-tablet) {
     top: auto;
     right: auto;
-    bottom: 0;
+    bottom: -20px;
     left: 50%;
     transform: translateX(-50%) rotate(90deg);
     width: 5px;
@@ -303,7 +303,7 @@
   transform: skew(-45deg);
 
   &.clone {
-    transform: scaleX(0);
+    transform: scaleX(0) skew(-45deg);
     transition: .3s .1s;
   }
 }
@@ -352,5 +352,5 @@
 }
 
 .project-nav-item.active .project-nav-bar.clone {
-  transform: scaleX(2);
+  transform: scaleX(2) skew(-45deg);
 }

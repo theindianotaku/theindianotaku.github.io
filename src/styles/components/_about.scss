@@ -84,3 +84,20 @@
     transform: rotate(0deg)
   }
 }
+
+.icon-myanimelist {
+  display: inline-block;
+  height: 24px;
+  position: relative;
+
+  &:before {
+    content: "MAL";
+    font-family: "Museo Sans";
+    font-weight: bolder;
+    font-size: 14px;
+    color: white;
+    border-radius: 0;
+    position: absolute;
+    top: 2px;
+  }
+}
