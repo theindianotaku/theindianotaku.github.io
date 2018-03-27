@@ -4,16 +4,18 @@ import { NavLink } from 'react-router-dom';
 
 import { projects } from '../data/content';
 import ProjectSection from './ProjectSection';
+import SliderModal from './Common/SliderModal';
 
 class ProjectPage extends Component {
   constructor(props) {
     super(props);
     this.projectRef = null;
     this.state = {
-      id : 1
+      id : 1,
+      modalIsOpen: true
     };
   }
-
+  
   componentWillMount () {
     if (this.props.match.params.id > projects.length) {
       this.props.history.push('/');
@@ -61,12 +63,28 @@ class ProjectPage extends Component {
     }
   }
 
+  openModal = () => {
+    this.setState({modalIsOpen: true});
+  }
+
+  afterOpenModal = () => {
+    console.log('did someone open me');
+  }
+
+  closeModal = () => {
+    this.setState({modalIsOpen: false});
+  }
+
   render () {
     const project = projects[this.state.id - 1];
 
     return (
       <div className="project__container transition-ease" ref={(loadedElem) => this.projectRef = loadedElem} >
-        <ProjectSection location={this.props.location} project={project} />
+        <ProjectSection 
+          location={this.props.location} 
+          project={project}
+          openModal={this.openModal} 
+        />
         <div className="project-nav">
           {projects.map((project, index) => {
             return (
@@ -78,6 +96,12 @@ class ProjectPage extends Component {
             );
           })}
         </div>
+        <SliderModal 
+          isOpen={this.state.modalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
+          contentLabel="Feature Slider Modal"
+        />
       </div>
     );
   }

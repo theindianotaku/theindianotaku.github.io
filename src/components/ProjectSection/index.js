@@ -5,7 +5,7 @@ import LazyImage from '../Common/LazyImage';
 import Pluses from '../Common/Pluses';
 import HLines from '../Common/HLines';
 
-const ProjectSection = ({ project }) => {
+const ProjectSection = ({ project, openModal }) => {
   const hdUrl = project.image;
 
   return (
@@ -21,7 +21,7 @@ const ProjectSection = ({ project }) => {
           <h1 className="project-title__title">
             {project.title}
           </h1>
-          <a className="project-showcase medium">Show Gallery</a>
+          <a onClick={openModal} className="project-showcase medium">Show Gallery</a>
         </div>
       </div>
       <div className="half project-content bold">

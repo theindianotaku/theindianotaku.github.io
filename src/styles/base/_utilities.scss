@@ -95,6 +95,11 @@
   margin-bottom: 24px;
 }
 
+.m-h-none {
+  margin-right: 0;
+  margin-left: 0;
+}
+
 // paddings
 .p-b-md {
   padding-bottom: 40px;
@@ -115,6 +120,11 @@
 
 .p-t-md {
   padding-top: 40px;
+}
+
+.p-h-none {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 // position 
