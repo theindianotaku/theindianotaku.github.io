@@ -28,7 +28,7 @@
 .project-pic {
   position: relative;
   display: flex;
-  cursor: pointer;
+  cursor: default;
 
   @media (max-width: $p-tablet) {
     width: 100% !important;
@@ -54,6 +54,7 @@
 }
 
 .project-img-holder {
+  display: flex;
   overflow: hidden;
   position: relative;
   width: 83.33%;
@@ -85,7 +86,7 @@
   }
 
   @media screen and (min-width: $p-tablet) {
-    height: calc(100vh - 120px);
+    height: calc(50vh - 60px);
   }
 }
 
@@ -116,16 +117,16 @@
   }
 
   @media (min-width: $p-mobile) {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   @media (min-width: $p-tablet) {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-left: -20px;
   }
 
   @media (min-width: $p-desktop) {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 

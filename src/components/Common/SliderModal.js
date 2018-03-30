@@ -1,13 +1,24 @@
 import React from 'react';
 import Modal from 'react-modal';
 import { Link } from 'react-router-dom';
-import { Grid } from 'react-feather';
+import { X } from 'react-feather';
+import Slider from 'react-slick';
 
+import { BASE_URL } from '../../data/imageList';
 import Logo from '../../assets/images/my-name.png';
 
 Modal.setAppElement('#root');
 
 const SliderModal = (props) => {
+  const sliderSettings = {
+    dots: true,
+    fade: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
+
   const style = {
     overlay: {
       position: 'fixed',
@@ -32,6 +43,9 @@ const SliderModal = (props) => {
       padding: '0px'
     }
   };
+
+  const images = props.images;
+
   return (
     <Modal
       {...props} 
@@ -51,11 +65,28 @@ const SliderModal = (props) => {
           <div className="header__right">
             <div className="valign-wrapper flex-end">
               <a onClick={props.onRequestClose} className="strike-through">
-                <Grid className="float-right" size={20} />
+                <X className="float-right" size={28} />
               </a>
             </div>
           </div>
         </nav>
+        <div className="main">
+          <Slider
+            {...sliderSettings}
+          >
+            {
+              images.list.map((image, index) => {
+                const URL = `${BASE_URL + images.folder}/${image}`;
+                
+                return (
+                  <div key={index}>
+                    <img src={URL} alt={image} />
+                  </div>
+                );
+              })
+            }
+          </Slider>
+        </div>
       </div>
     </Modal>
   );

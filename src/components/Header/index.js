@@ -15,27 +15,27 @@ const Header = () => (
     </div>
     <div className="header__right hidden-on-mobile">
       <div className="valign-wrapper flex-end">
-        <NavLink className="strike-through" activeClassName="active" to="/work">
+        <NavLink className="strike-through standout-text" activeClassName="active" to="/" exact>
+          home
+        </NavLink>
+        <NavLink className="strike-through standout-text" activeClassName="active" to="/work">
           work
         </NavLink>
-        <NavLink className="strike-through" activeClassName="active" to="/workflow">
-          workflow
-        </NavLink>
-        <NavLink className="strike-through" activeClassName="active" to="/about">
+        <NavLink className="strike-through standout-text" activeClassName="active" to="/about">
           about
         </NavLink>
-        <NavLink className="strike-through" activeClassName="active" to="/contact">
+        <NavLink className="strike-through standout-text" activeClassName="active" to="/contact">
           contact
         </NavLink>
       </div>
     </div>
     <div className="header__right hidden-on-tablet">
       <div className="valign-wrapper flex-end">
+        <NavLink className="strike-through" activeClassName="active" to="/">
+          <List className="float-right" size={20} />
+        </NavLink>
         <NavLink className="strike-through" activeClassName="active" to="/work">
           <Grid className="float-right" size={20} />
-        </NavLink>
-        <NavLink className="strike-through" activeClassName="active" to="/workflow">
-          <List className="float-right" size={20} />
         </NavLink>
         <NavLink className="strike-through" activeClassName="active" to="/about">
           <User className="float-right" size={20} />

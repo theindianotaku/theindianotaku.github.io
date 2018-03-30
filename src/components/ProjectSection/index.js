@@ -69,7 +69,11 @@ const ProjectSection = ({ project, openModal }) => {
             </div>
           </Col>
         </Row>
-        <a className="project-desc-showcase medium">Github Repo</a>
+        {
+          project.showcaseText ? (
+            <a href={project.showcaseLink} className="project-desc-showcase medium no-underline">{project.showcaseText}</a>
+          ) : null
+        }
       </div>
       <Pluses />
       <HLines />

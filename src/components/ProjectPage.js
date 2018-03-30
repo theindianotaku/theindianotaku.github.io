@@ -3,6 +3,7 @@ import { withRouter } from 'react-router';
 import { NavLink } from 'react-router-dom';
 
 import { projects } from '../data/content';
+import { imageList } from '../data/imageList';
 import ProjectSection from './ProjectSection';
 import SliderModal from './Common/SliderModal';
 
@@ -12,7 +13,7 @@ class ProjectPage extends Component {
     this.projectRef = null;
     this.state = {
       id : 1,
-      modalIsOpen: true
+      modalIsOpen: false
     };
   }
   
@@ -77,6 +78,7 @@ class ProjectPage extends Component {
 
   render () {
     const project = projects[this.state.id - 1];
+    const images = imageList[this.state.id - 1];
 
     return (
       <div className="project__container transition-ease" ref={(loadedElem) => this.projectRef = loadedElem} >
@@ -97,6 +99,7 @@ class ProjectPage extends Component {
           })}
         </div>
         <SliderModal 
+          images={images}
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}

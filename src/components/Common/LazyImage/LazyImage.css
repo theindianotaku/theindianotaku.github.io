@@ -1,8 +1,8 @@
 .lazy-image-container {
   position: relative;
-
+  align-self: flex-end;
   width: 100%;
-  height: inherit;
+  height: 50vh;
 
   overflow: hidden;
 }
