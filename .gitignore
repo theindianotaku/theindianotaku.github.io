@@ -29,3 +29,6 @@ yarn-error.log*
 
 #old-website files
 /src/old-website
+
+#todo files
+*.TODO
