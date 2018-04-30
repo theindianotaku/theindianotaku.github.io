@@ -29,9 +29,9 @@ const Header = () => (
         </NavLink>
       </div>
     </div>
-    <div className="header__right hidden-on-tablet">
+    <div className="header__right hidden-above-mobile">
       <div className="valign-wrapper flex-end">
-        <NavLink className="strike-through" activeClassName="active" to="/">
+        <NavLink className="strike-through" activeClassName="active" to="/" exact>
           <List className="float-right" size={20} />
         </NavLink>
         <NavLink className="strike-through" activeClassName="active" to="/work">

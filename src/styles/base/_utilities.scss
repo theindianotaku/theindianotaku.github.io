@@ -153,35 +153,26 @@
 
 // hide-show classes
 .hidden-on-mobile {
-  display: none !important;
+  @media (max-width: $p-mobile) {
+    display: none !important;
+  }
+}
 
+.hidden-above-mobile {
   @media (min-width: $p-mobile) {
-    display: flex !important;
+    display: none !important;
   }
 }
 
 .hidden-on-tablet {
-  display: initial;
-
-  @media (min-width: $tablet) {
-    display: none;
+  @media (max-width: $p-tablet) {
+    display: none !important;
   }
 }
 
-.hidden-below-md {
-  display: none;
-}
-
-.visible-below-md {
-  display: block;
-}
-
-@media (min-width: 992px) {
-  .hidden-below-md {
-    display: initial;
-  }
-  .visible-below-md {
-    display: none;
+.hidden-above-tablet {
+  @media (min-width: $p-tablet) {
+    display: none !important;
   }
 }
 

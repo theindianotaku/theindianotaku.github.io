@@ -5,6 +5,13 @@
   position: relative;
 }
 
+.project-item__container {
+  display: flex;
+  height: calc(100% - 60px);
+  width: 100%;
+  position: relative;
+}
+
 .project-controls {
   position: absolute;
   top: 0;

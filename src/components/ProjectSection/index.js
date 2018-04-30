@@ -71,7 +71,7 @@ const ProjectSection = ({ project, openModal }) => {
         </Row>
         {
           project.showcaseText ? (
-            <a href={project.showcaseLink} className="project-desc-showcase medium no-underline">{project.showcaseText}</a>
+            <a rel="noopener noreferrer" target="_blank" href={project.showcaseLink} className="project-desc-showcase medium no-underline">{project.showcaseText}</a>
           ) : null
         }
       </div>

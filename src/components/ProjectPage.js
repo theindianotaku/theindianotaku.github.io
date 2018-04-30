@@ -69,7 +69,7 @@ class ProjectPage extends Component {
   }
 
   afterOpenModal = () => {
-    console.log('did someone open me');
+    
   }
 
   closeModal = () => {
@@ -81,7 +81,7 @@ class ProjectPage extends Component {
     const images = imageList[this.state.id - 1];
 
     return (
-      <div className="project__container transition-ease" ref={(loadedElem) => this.projectRef = loadedElem} >
+      <div className="project-item__container transition-ease" ref={(loadedElem) => this.projectRef = loadedElem} >
         <ProjectSection 
           location={this.props.location} 
           project={project}

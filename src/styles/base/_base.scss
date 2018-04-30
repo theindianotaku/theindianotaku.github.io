@@ -97,8 +97,7 @@ h2+p.label, h3+p.label {
 
 .main {
   position: relative;
-  height: calc(100vh - 120px);
-  margin-bottom: 60px;
+  height: calc(100vh - 60px);
   z-index: 20;
   flex: 1;
 }

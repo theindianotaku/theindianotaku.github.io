@@ -8,7 +8,7 @@ const AboutPage = () => {
   return (
     <div className="project__container">
       <div className="half valign-wrapper">
-        <img src={ProfilePic} alt="Debashish Nayak" width="80%" />
+        <img className="hidden-on-tablet" src={ProfilePic} alt="Debashish Nayak" width="80%" />
       </div>
       <div className="half about__content">
         <Scrollbars

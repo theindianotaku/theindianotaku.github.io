@@ -7,7 +7,6 @@ import AboutPage from '../components/AboutPage';
 import ContactPage from '../components/ContactPage';
 import ProjectsListPage from '../components/ProjectsListPage';
 import ProjectPage from '../components/ProjectPage';
-import WorkflowPage from '../components/WorkflowPage';
 import NotFoundPage from '../components/NotFoundPage';
 import Lines from '../components/Common/Lines';
 
@@ -18,7 +17,6 @@ const AppRouter = () => (
       <main className="main">
         <Switch>
           <Route path="/" exact={true} component={LandingPage} />
-          <Route path="/workflow" component={WorkflowPage} />
           <Route path="/work" component={ProjectsListPage} />
           <Route path="/projects/:id" component={ProjectPage} />
           <Route path="/about" component={AboutPage} />
