@@ -5,7 +5,7 @@ Re-design and re-structuring my portfolio website [theindianotkau.github.io](htt
 ## Disclaimer
 
 This project is deployed to Github Pages using [gh-pages](https://www.npmjs.com/package/gh-pages). This master branch comprises of production code.
-You may visit the [source](https://github.com/theindianotaku/theindianotaku.github.io/tree/source) branch to check the development cododebase. Thank you.
+You may visit the [source](https://github.com/theindianotaku/theindianotaku.github.io/tree/source) branch to check the development codebase. Thank you.
 
 ## TODO
 
@@ -22,7 +22,7 @@ You may visit the [source](https://github.com/theindianotaku/theindianotaku.gith
   - ~~Contact page: fix spelling mistakes~~
 
 - Home Page
-  - Add a 'Hi!' in the main lion
+  - Add a 'Hi!' in the main line
   - Add a resume button
 
 - Project-List Page
