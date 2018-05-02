@@ -13,7 +13,14 @@ class ProjectPage extends Component {
     this.projectRef = null;
     this.state = {
       id : 1,
-      modalIsOpen: false
+      modalIsOpen: false,
+      didScroll: false,
+      touch: {
+        xUp: 0,
+        xDown: 0,
+        yUp: 0,
+        yDown: 0
+      }
     };
   }
   
@@ -76,12 +83,67 @@ class ProjectPage extends Component {
     this.setState({modalIsOpen: false});
   }
 
+  resetScroll = () => {
+    this.setState({ didScroll: false, touch: {xDown: 0, yDown: 0} });
+  }
+
+  handleWheel = (e) => {
+    if (!this.state.didScroll) {
+      this.setState({didScroll: true});
+      e.deltaY > 0 ? this.nextProject() : this.prevProject();
+      setTimeout(() => {
+        this.resetScroll();        
+      }, 1000);
+    }
+  }
+
+  handleTouchStart = (e) => {
+    let xDown = e.touches[0].clientX;                                      
+    let yDown = e.touches[0].clientY;
+
+    this.setState({ touch: {xDown, yDown}} );
+  }
+
+  handleTouchMove = (e) => {
+    let {xDown, yDown } = { ...this.state.touch };
+    if ( ! xDown || ! yDown ) {
+      return;
+    }
+
+    let xUp = e.touches[0].clientX;                                    
+    let yUp = e.touches[0].clientY;
+
+    let xDiff = xDown - xUp;
+    let yDiff = yDown - yUp;
+
+    if ( (Math.abs( xDiff ) > Math.abs( yDiff )) && !this.state.didScroll) { /*most significant*/
+      this.setState({didScroll: true});
+
+      if ( xDiff > 0 ) {
+        this.prevProject();
+      } else {
+        this.nextProject();
+      }
+    }
+
+    /* reset values */
+    setTimeout(() => {
+      this.resetScroll();        
+    }, 500);
+  }
+
   render () {
     const project = projects[this.state.id - 1];
     const images = imageList[this.state.id - 1];
 
     return (
-      <div className="project-item__container transition-ease" ref={(loadedElem) => this.projectRef = loadedElem} >
+      <div 
+        className="project-item__container transition-ease" 
+        ref={(loadedElem) => this.projectRef = loadedElem} 
+        onWheel= {this.handleWheel}
+        onTouchStart = {this.handleTouchStart}
+        onTouchMove = {this.handleTouchMove}
+      >
         <ProjectSection 
           location={this.props.location} 
           project={project}
