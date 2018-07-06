@@ -1,11 +1,11 @@
 {
-  "main.css": "static/css/main.8f929c27.css",
-  "main.css.map": "static/css/main.8f929c27.css.map",
-  "main.js": "static/js/main.409cb785.js",
-  "main.js.map": "static/js/main.409cb785.js.map",
-  "static\\media\\animated.png": "static/media/animated.7cae5a0c.png",
-  "static\\media\\loader.svg": "static/media/loader.a75a5f09.svg",
-  "static\\media\\museo-sans-rounded-bold.otf": "static/media/museo-sans-rounded-bold.d3f724a4.otf",
-  "static\\media\\museo-sans-rounded.otf": "static/media/museo-sans-rounded.f49cd3fc.otf",
-  "static\\media\\my-photo.png": "static/media/my-photo.82ff896c.png"
+  "main.css": "static/css/main.e4171df3.css",
+  "main.css.map": "static/css/main.e4171df3.css.map",
+  "main.js": "static/js/main.fb5492ca.js",
+  "main.js.map": "static/js/main.fb5492ca.js.map",
+  "static/media/animated.png": "static/media/animated.7cae5a0c.png",
+  "static/media/loader.svg": "static/media/loader.a75a5f09.svg",
+  "static/media/museo-sans-rounded-bold.otf": "static/media/museo-sans-rounded-bold.d3f724a4.otf",
+  "static/media/museo-sans-rounded.otf": "static/media/museo-sans-rounded.f49cd3fc.otf",
+  "static/media/my-photo.png": "static/media/my-photo.82ff896c.png"
 }
